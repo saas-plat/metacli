@@ -43,8 +43,6 @@ class CreateCommand extends Command {
     return req;
   };
 
-
-
   async download(targetDir) {
     // 如果已经存在就不下载
     try {
@@ -95,7 +93,7 @@ class CreateCommand extends Command {
   async run() {
     const { args, flags } = this.parse(CreateCommand);
     //console.log(args, flags) 
-    await this.download(path.resolve(args.name));
+    await this.download(path.resolve(args.name), flags.force);
   }
 }
 
@@ -106,7 +104,7 @@ CreateCommand.args = [{
 }];
 
 CreateCommand.flags = {
-
+  force: flags.string({char: 'f', description: 'overlay existing folder'}),
 };
 
 module.exports = CreateCommand;
