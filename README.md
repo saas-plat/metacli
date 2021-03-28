@@ -46,6 +46,7 @@ USAGE
 * [`metacli create [NAME]`](#metacli-create-name)
 * [`metacli help [COMMAND]`](#metacli-help-command)
 * [`metacli publish`](#metacli-publish)
+* [`metacli voucher`](#metacli-voucher)
 
 ## `metacli create [NAME]`
 
@@ -54,6 +55,9 @@ create module from metastarter
 ```
 USAGE
   $ metacli create [NAME]
+
+OPTIONS
+  -f, --force=force  overlay existing folder
 ```
 
 _See code: [src/commands/create.js](https://github.com/saas-plat/metacli/blob/v1.0.0/src/commands/create.js)_
@@ -77,11 +81,25 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.1
 
 ## `metacli publish`
 
-Describe the command here
+publish project new version
 
 ```
 USAGE
   $ metacli publish
+
+OPTIONS
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/publish.js](https://github.com/saas-plat/metacli/blob/v1.0.0/src/commands/publish.js)_
+
+## `metacli voucher`
+
+Describe the command here
+
+```
+USAGE
+  $ metacli voucher
 
 OPTIONS
   -n, --name=name  name to print
@@ -91,7 +109,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/publish.js](https://github.com/saas-plat/metacli/blob/v1.0.0/src/commands/publish.js)_
+_See code: [src/commands/voucher.js](https://github.com/saas-plat/metacli/blob/v1.0.0/src/commands/voucher.js)_
 <!-- commandsstop -->
 * [`metacli hello`](#metacli-hello)
 * [`metacli help [COMMAND]`](#metacli-help-command)
